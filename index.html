@@ -769,11 +769,75 @@
             --accent-color: #ec4899;
             --neon-color: #10b981;
             --text-color: #1f2937;
-            --bg-color: #f9fafb;
-            --card-bg: rgba(255, 255, 255, 0.7);
+            --bg-color: #f1f5f9;
+            --card-bg: rgba(255, 255, 255, 0.8);
             --hover-color: #4f46e5;
-            --border-color: rgba(0, 0, 0, 0.1);
+            --border-color: rgba(139, 92, 246, 0.2);
         }
+
+            body.light-mode .bg-grid {
+                background-image: linear-gradient(rgba(99, 102, 241, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(99, 102, 241, 0.1) 1px, transparent 1px);
+            }
+
+            body.light-mode .cyber-grid {
+                background: linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px);
+            }
+
+            body.light-mode .bg-glow {
+                background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(99, 102, 241, 0.1) 40%, rgba(241, 245, 249, 0) 70%);
+            }
+
+            body.light-mode .star {
+                background: #8b5cf6;
+            }
+
+            body.light-mode .shooting-star {
+                background: linear-gradient(90deg, rgba(139, 92, 246, 0.8), transparent);
+            }
+
+            body.light-mode .cursor-dot {
+                background-color: #8b5cf6;
+                box-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
+            }
+
+            body.light-mode .cursor-outline {
+                border: 2px solid rgba(139, 92, 246, 0.5);
+                box-shadow: 0 0 10px var(--primary-color);
+            }
+
+            body.light-mode .profile-username {
+                color: #64748b;
+            }
+
+            body.light-mode .profile-bio {
+                background-color: rgba(255, 255, 255, 0.7);
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+            }
+
+            body.light-mode .link-item {
+                background-color: rgba(255, 255, 255, 0.7);
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            }
+
+                body.light-mode .link-item:hover {
+                    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(139, 92, 246, 0.2);
+                }
+
+            body.light-mode .theme-toggle,
+            body.light-mode .music-player {
+                background: rgba(255, 255, 255, 0.7);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            }
+
+                body.light-mode .theme-toggle:hover,
+                body.light-mode .music-player:hover {
+                    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1), 0 0 15px rgba(139, 92, 246, 0.3);
+                }
+
+            body.light-mode .link-icon {
+                text-shadow: 0 0 5px rgba(139, 92, 246, 0.5);
+            }
 
         @keyframes fadeIn {
             from {
@@ -839,18 +903,18 @@
                 font-size: 15px;
                 padding: 15px;
             }
-            
+
             .link-item {
                 width: 100%;
             }
         }
-        
+
         @media (min-width: 500px) and (max-width: 600px) {
             .link-item {
                 width: calc(50% - 10px);
             }
         }
-        
+
         @media (max-width: 499px) {
             .link-item {
                 width: 100%;
@@ -881,7 +945,7 @@
         <i class="fas fa-pause"></i>
         <div class="music-waves" id="musicWaves"></div>
         <audio id="bgMusic" loop>
-            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+            <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Yung_Kartz/July_2019/Yung_Kartz_-_02_-_Levels.mp3" type="audio/mp3">
         </audio>
     </div>
 
@@ -901,64 +965,63 @@
         </div>
 
         <div class="links">
-            <a href="https://discord.com/users/1276774559613325473" target="_blank" class="link-item" style="--i:1">
+            <a href="https://discord.com/users/1276774559613325473" target="_blank" rel="noopener" class="link-item" style="--i:1">
                 <i class="fab fa-discord link-icon discord"></i>
                 <span class="link-text">Discord</span>
             </a>
 
-            <a href="https://x.com/ryuseiryusei_sc" target="_blank" class="link-item" style="--i:2">
+            <a href="https://x.com/ryuseiryusei_sc" target="_blank" rel="noopener" class="link-item" style="--i:2">
                 <svg class="x-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                 </svg>
                 <span class="link-text">X (Twitter)</span>
             </a>
 
-            <a href="https://bsky.app/profile/ryuseiryusei.bsky.social" target="_blank" class="link-item" style="--i:3">
+            <a href="https://bsky.app/profile/ryuseiryusei.bsky.social" target="_blank" rel="noopener" class="link-item" style="--i:3">
                 <svg class="x-icon" style="fill: #1DA1F2;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 16.5v-7h2v7h-2zm0-9V7h2v2.5h-2z" />
                 </svg>
                 <span class="link-text">Bluesky</span>
             </a>
 
-            <a href="https://github.com/ryusei-star" target="_blank" class="link-item" style="--i:4">
+            <a href="https://github.com/ryusei-star" target="_blank" rel="noopener" class="link-item" style="--i:4">
                 <i class="fab fa-github link-icon github"></i>
                 <span class="link-text">GitHub</span>
             </a>
 
-            <a href="https://www.youtube.com/channel/UCbPBS5ttRPFhx4070ffmBCg" target="_blank" class="link-item" style="--i:5">
+            <a href="https://www.youtube.com/channel/UCbPBS5ttRPFhx4070ffmBCg" target="_blank" rel="noopener" class="link-item" style="--i:5">
                 <i class="fab fa-youtube link-icon youtube"></i>
                 <span class="link-text">YouTube</span>
             </a>
 
-            <a href="https://www.twitch.tv/ryuseiryusei123" target="_blank" class="link-item" style="--i:6">
+            <a href="https://www.twitch.tv/ryuseiryusei123" target="_blank" rel="noopener" class="link-item" style="--i:6">
                 <i class="fab fa-twitch link-icon twitch"></i>
                 <span class="link-text">Twitch</span>
             </a>
 
-            <a href="https://www.tiktok.com/@ryuseiryusei123" target="_blank" class="link-item" style="--i:7">
+            <a href="https://www.tiktok.com/@ryuseiryusei123" target="_blank" rel="noopener" class="link-item" style="--i:7">
                 <i class="fab fa-tiktok link-icon tiktok"></i>
                 <span class="link-text">TikTok</span>
             </a>
 
-            <a href="https://open.spotify.com/user/31n4tq4sllr5kf3lgh3zpxwdg2oi" target="_blank" class="link-item" style="--i:8">
+            <a href="https://open.spotify.com/user/31n4tq4sllr5kf3lgh3zpxwdg2oi" target="_blank" rel="noopener" class="link-item" style="--i:8">
                 <i class="fab fa-spotify link-icon spotify"></i>
                 <span class="link-text">Spotify</span>
             </a>
 
-            <a href="https://www.xbox.com/play/user/ryuseiryusei123" target="_blank" class="link-item" style="--i:9">
+            <a href="https://www.xbox.com/play/user/ryuseiryusei123" target="_blank" rel="noopener" class="link-item" style="--i:9">
                 <i class="fab fa-xbox link-icon xbox"></i>
                 <span class="link-text">Xbox</span>
             </a>
 
-            <a href="https://mc.ryusei.f5.si" target="_blank" class="link-item" style="--i:10">
+            <a href="https://mc.ryusei.f5.si" target="_blank" rel="noopener" class="link-item" style="--i:10">
                 <i class="fas fa-server link-icon" style="color: var(--primary-color);"></i>
                 <span class="link-text">HavenMC 公式サイト</span>
             </a>
         </div>
     </div>
 
-    <script>
-        function init3DBackground() {
+    <script>function init3DBackground() {
             const container = document.getElementById('canvas-container');
             const width = window.innerWidth;
             const height = window.innerHeight;
@@ -1100,18 +1163,18 @@
             }
         }
 
-        // カスタムカーソルの実装を修正
         const cursor = document.querySelector('.cursor');
         const cursorDot = document.querySelector('.cursor-dot');
         const cursorOutline = document.querySelector('.cursor-outline');
 
-        // マウスの動きに合わせてカーソルを移動
         document.addEventListener('mousemove', (e) => {
             cursor.style.display = 'block';
-            
-            // カーソルの位置を直接設定（transformではなく）
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
+
+            // カーソルの位置を直接設定
+            const x = e.clientX;
+            const y = e.clientY;
+            cursor.style.left = x + 'px';
+            cursor.style.top = y + 'px';
         });
 
         document.addEventListener('mouseout', () => {
@@ -1145,13 +1208,13 @@
                 const rect = container.getBoundingClientRect();
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
-                
+
                 const centerX = rect.width / 2;
                 const centerY = rect.height / 2;
-                
+
                 const xAxis = (centerX - x) / 25;
                 const yAxis = (centerY - y) / 25;
-                
+
                 container.style.transform = `perspective(1000px) rotateY(${xAxis}deg) rotateX(${-yAxis}deg)`;
             });
 
@@ -1159,21 +1222,24 @@
                 container.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg)';
             });
 
+            // SNSカードにホバーしてもカーソルが消えないように修正
             linkItems.forEach(item => {
                 item.addEventListener('mousemove', (e) => {
+                    // イベントの伝播を止めるが、カーソルは表示したまま
                     e.stopPropagation();
-                    const rect = item.getBoundingClientRect();
-                    const x = e.clientX - rect.left;
-                    const y = e.clientY - rect.top;
 
-                    const xAxis = (rect.width / 2 - x) / 15;
-                    const yAxis = (rect.height / 2 - y) / 15;
-
-                    item.style.transform = `translateY(-3px) rotateY(${xAxis}deg) rotateX(${-yAxis}deg)`;
+                    // カーソルの位置を更新
+                    const x = e.clientX;
+                    const y = e.clientY;
+                    cursor.style.left = x + 'px';
+                    cursor.style.top = y + 'px';
+                    cursor.style.display = 'block';
                 });
 
-                item.addEventListener('mouseleave', () => {
-                    item.style.transform = 'translateY(0) rotateY(0deg) rotateX(0deg)';
+                // リンクアイテムからマウスが出ても、カーソルを消さない
+                item.addEventListener('mouseout', (e) => {
+                    // カーソルを消さないようにする
+                    e.stopPropagation();
                 });
             });
         }
@@ -1223,10 +1289,15 @@
             }
         });
 
+        document.querySelectorAll('a[target="_blank"]').forEach(link => {
+            link.setAttribute('rel', 'noopener');
+        });
+
         document.addEventListener('DOMContentLoaded', () => {
             try {
                 init3DBackground();
             } catch (e) {
+                console.error('3D背景の初期化に失敗しました:', e);
             }
 
             createBgAnimation();
@@ -1242,7 +1313,6 @@
 
             const profileName = document.querySelector('.profile-name');
             profileName.setAttribute('data-text', profileName.textContent);
-        });
-    </script>
+        });</script>
 </body>
 </html>
